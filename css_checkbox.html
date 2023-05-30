@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <link href="data:image/x-icon;" rel="icon" />
+    <title>CSS HIDDEN CHECKBOX EXAMPLE</title>
+    <style>
+
+      .ll {
+        font-size: 100px;
+        user-select: none;
+        cursor: pointer;
+      }
+
+      .cbDiv > input[type=checkbox]:not(:checked) + .ll {
+        text-decoration: line-through;
+        opacity: 50%;
+        color: grey;
+      }
+
+      .cbDiv > input[type=checkbox]:checked + .ll {
+        text-decoration: none;
+        opacity: 100%;
+        color: black;
+      }
+
+      #box {
+        display: none;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="cbDiv">
+      <input type="checkbox" id="box">
+      <label for="box" class="ll">Click Me</label>
+    </div>
+
+  </body>
+</html>
