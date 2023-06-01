@@ -8,15 +8,13 @@ function ggg () {
 FUNCS+=(ggg)
 
 
-uuu(){ echo iiiii;}
-FUNCS+=(uuu)
-
+FUNCS+=(uuu);uuu(){ echo iiiii;}
 
 
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
   :
 elif [[ " ${FUNCS[@]} " =~ " ${1} " ]]; then
-  ${FUNCS[$f]}
+  $1
 else
   echo "USAGE FOR $0:"
   for f in "${FUNCS[@]}"; do
